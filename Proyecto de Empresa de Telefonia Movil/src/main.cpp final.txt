@@ -1,0 +1,26 @@
+#include <iostream>
+#include "clientes.h"
+#include "lineas.h"
+#include "facturas.h"
+using namespace std;
+
+int main() {
+    CargarClientes();
+    CargarLineas();
+    CargarFacturas();
+
+    int Opcion;
+    do {
+        cout << "\nMenu Principal\n1.Clientes\n2.Lineas\n3.Facturas\n4.Salir\nOpcion: ";
+        cin >> Opcion;
+        switch(Opcion) {
+            case 1: MenuClientes(); break;
+            case 2: MenuLineas(); break;
+            case 3: MenuFacturas(); break;
+            case 4: break;
+            default: cout << "Opcion invalida\n"; break;
+        }
+    } while(Opcion != 4);
+
+    return 0;
+}
